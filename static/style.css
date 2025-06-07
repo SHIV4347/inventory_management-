@@ -1,25 +1,23 @@
-/* Basic reset for margin and padding */
-* {
+ {
     margin: 2;
     padding: 2;
     box-sizing: border-box;
 }
 
-/* Set body background color and font properties */
 body {
-    background-color: #BBBBBB; /* Light purple for a fresh look */
+    background-color: #BBBBBB;
     font-family: 'Roboto', sans-serif;
     color: #333;
 }
 
-/* Centered container */
+
 .container {
     max-width: 1000px;
     margin: 0 auto;
     padding: 20px;
 }
 
-/* Navigation bar styling */
+
 .navbar {
     background-color: #888888 !important;
     color: #000000;
@@ -34,7 +32,7 @@ body {
     font-weight: bold;
 }
 
-/* Flash message styling */
+
 .flash-message {
     background-color: #ffc107;
     color: #000;
@@ -44,7 +42,7 @@ body {
     margin-bottom: 20px;
 }
 
-/* Heading styling */
+
 h1 {
     color: #000000;
     font-size: 2.5em;
@@ -60,7 +58,7 @@ h2 {
     text-align: center;
 }
 
-/* Profile information styling */
+
 p {
     font-size: 1.1em;
     color: #000000;
@@ -68,14 +66,14 @@ p {
     margin-bottom: 10px;
 }
 
-/* Divider styling */
+
 hr {
     border: 0;
     border-top: 1px solid #000000;
     margin: 20px 0;
 }
 
-/* List styling for items, bids, and won items */
+
 .list-group {
     margin-top: 15px;
     padding: 0;
@@ -98,7 +96,7 @@ hr {
     background-color: #f8f9fa;
 }
 
-/* Button styling within list items */
+
 .btn-sm {
     font-size: 0.9em;
     padding: 5px 10px;
@@ -115,7 +113,7 @@ hr {
     background-color: #c82333;
 }
 
-/* Success button styling for adding new items */
+
 .btn-success {
     display: block;
     margin: 20px auto;
@@ -133,16 +131,16 @@ hr {
     background-color: #218838;
 }
 
-/* Styling for interactive sections */
+
 section {
     margin-bottom: 30px;
-    background-color: #fff; /* Adds contrast against background */
+    background-color: #fff; 
     padding: 20px;
     border-radius: 8px;
     box-shadow: 0px 4px 8px rgba(0, 0, 0);
 }
 
-/* Responsive adjustments */
+
 @media (max-width: 768px) {
     p, h1, h2 {
         text-align: center;
