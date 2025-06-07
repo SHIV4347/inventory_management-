@@ -1,0 +1,40 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<h1>Profile: {{ user.name }}</h1>
+<p><strong>Email:</strong> {{ user.email }}</p>
+<p><strong>Mobile No.:</strong> {{ user.mobile_number }}</p>
+<p><strong>Address:</strong> {{ user.address }}</p>
+<hr/>
+<h2>Your Items</h2>
+<div class="row">
+    {% for item in items %}
+    <div class="col-md-12 mb-4">
+        <div class="row border p-3">
+            <div class="col-md-4">
+                <img class="img-fluid" src="{{ url_for('static', filename=item.image_path) }}" alt="{{ item.item_name }}">
+            </div>
+            <div class="col-md-8">
+                <h5>{{ item.item_name }}</h5>
+                <p><strong>Inventory:</strong> {{ item.Inventory }}</p>
+                <p><strong>Price:</strong> ₹{{ item.price }}</p>
+                <p><strong>Owner:</strong> {{ item.owner_name }}</p>
+        
+                <form action="{{ url_for('end_auction', item_id=item['item_id']) }}" method="POST" style="display:inline;">
+                    <button type="submit" class="btn btn-danger btn-sm float-right">Remove Item</button>
+                </form>
+
+                <form action="{{ url_for('update_inventory', item_id=item['item_id']) }}" method="POST" style="display:inline;">
+                    <input type="text" name="inventory" value="{{ item['Inventory'] }}" required>
+                    <button type="submit" class="btn btn-primary btn-sm">Update Inventory</button>
+                </form>
+                
+                
+            </div>
+        </div>
+    </div>
+    {% endfor %}
+</div>
+<a href="/add_item" class="btn btn-success mt-3">Add New Item</a>
+
+{% endblock %}
