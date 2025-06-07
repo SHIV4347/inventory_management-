@@ -22,10 +22,6 @@ CREATE TABLE Items (
     FOREIGN KEY (user_id) REFERENCES Users(user_id)
 );
 
-delete from users where user_id=4;
-
-select * from Items
-select * from Users
 
 
 
